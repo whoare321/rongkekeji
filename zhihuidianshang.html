@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>智慧</title>
+	<style type="text/css">
+		*{padding:0;margin: 0;}
+		.header{width:95%;height: 64px;background: #fff;margin:auto;text-align: center;}
+		.header div{float: left;}
+		.header .logo a{float: left;text-decoration: none;margin-top: 17px;}
+		.header .logo .logo-1{width: 152px;height: 47px;background: url(images/logo-1.jpg);}
+		.header .logo .logo-2{width: 102px;height: 47px;background: url(images/logo-2.jpg);}
+		.header .head .heads li{float: left;list-style: none;display: inline-block;height: 60px;line-height: 60px;width: 100px;background: #fff;text-align: center;font-weight: bold;}
+		.header .head .heads li:hover{background: #eee;}
+		.header .head .heads li a{text-decoration: none;color: #444;}
+		.header .head .heads li ul{float: left;clear: both;}
+
+		.header .head .heads .heads-2 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 25px;height: 25px;font-size: 12px;}
+		.header .head .heads .heads-2 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-2 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-2 li a:hover{color: #007BC1;}
+		.header .head .heads .heads-1 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 15px;height: 20px;}
+		.header .head .heads .heads-1 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-1 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-1 li a:hover{color: #007BC1;}
+		.header .search{width: 225px;height: 22px;border-radius: 4px;border:1px solid #A5D5CA;margin-top: 20px;}
+		.header .search input{width: 200px;height: 20px;border:none;}
+		.header .search a{width:20px;height: 22px;background: url(images/search-1.jpg)no-repeat;border:none;display: inline-block;float: right;}
+		.header .ying{color: #888;padding-left: 5px;margin-top: 20px;}
+		.header .ying span{color: #333;margin-left: 5px;}
+		.conten{width: 100%;height:1500px;}
+		.back-1{width:100%;height: 409px;}
+		.back-1 li{list-style: none;}
+		.back-1 .back-11{width:100%;height: 339px;background: url(images/zhihui.png)center center;display: block;}
+		.back-1 .back-12{width:100%;height: 70px;background: url(images/back-12.jpg);display: block;color: #fff;padding-left: 80px;line-height: 70px;}
+		.back-1 .back-12 a{color: #fff;text-decoration: none;}
+		.back-1 .back-12 a:hover{color: #2C92BF;text-decoration: underline;cursor: pointer;}
+		.back-2{width: 100%;height: 400px;background: #fff;}
+		.back-2 .back-21{width: 976px;height: 110px;font-size: 26px;font-weight: bold;line-height: 110px;text-align: center;margin:10px auto;}
+		.back-3{width: 976px;height: 150px;border-top: 1px solid#000;margin:0 auto;}
+		.back-3 span{padding-top: 20px;display: block;}
+		.back-3 .neirong2{font-size: 16px;color: #666;}
+
+		.back-4{width: 976px;height: 90px;margin:0 auto;}
+		.back-4 span{padding-top: 20px;display: block;}
+		.back-4 .neirong1{font-size: 18px;color: #008fd7;}
+		.it,.it img{width: 800px;height:434px;margin: 1px auto;}
+
+		.jiazhi{width: 976px;height: 200px;margin: 1px auto;}
+		.jiazhi span{display: block;margin-top: 15px;}
+		.jiazhi .jia1{font-size: 18px;color: #008fd7;}
+		.jiazhi .jia2{font-size: 16px;color: #666;}
+
+		.footer {width: 100%;height: 170px;background: #4c4c4c;font-size: 12px;color: #fff;margin-top: 30px;}
+		.footer div{float: left;margin-left: 20px}
+		.footer .footer-1,.footer .footer-2,.footer .footer-3{margin-top: 30px;}
+		.footer .footer-1 a{width: 74px;height: 74px;background: url(images/footer-1.jpg);background-size: 100% 100%;display: inline-block;margin-left: 70px;}
+		.footer .footer-2 p{margin-top:8px;}
+		.footer div.footer-3{float: right;margin-right: 70px;}
+		.footer div.footer-3 div{clear: both;float: right;margin-top: 5px;}
+		.footer .footer-31 a{text-decoration: none;color: #fff;margin-left: 20px;}
+		.footer .footer-33 span{display: inline-block;width: 18px;height: 20px;background: url(images/footer-33.png);vertical-align: middle;margin-right: 10px;}
+		.footer .footer-33 a{text-decoration: none;color: #fff;}
+	</style>
+</head>
+<body>
+	<div class="header">
+			<div class="logo">
+				<a class="logo-1" href="rongkeshouye.html"></a>
+				<a class="logo-2" href="http://irm.p5w.net/ssgs/S300290/"></a>
+			</div>
+			<div class="head">
+				<ul class="heads">
+					<li>
+						<a href="rongkeshouye.html">首页</a>
+					</li>
+					<li>
+						<a href="rongkeshouye.html">产品
+							<ul class="heads-2">
+								<li class="p1"><p>临床信息服务系统</p></li>
+								<li><a href="jizheng.html">急诊医学临床信息系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>医院管理信息系统</p></li>
+								<li><a href="yunweifuwu.html">全门诊智慧导诊系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>融合集成平台</p></li>
+								<li><a href="yunweifuwu.html">医院信息集成平台</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>区域医疗平台</p></li>
+								<li><a href="yunweifuwu.html">远程医院视频服务</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智维云平台</p></li>
+								<li><a href="yunweifuwu.html">云监控产品</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市产品</p></li>
+								<li><a href="yunweifuwu.html">协同办公</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">解决方案
+							<ul class="heads-2">
+								<li class="p1"><p>智维云方案</p></li>
+								<li><a href="jinrong.html">金融行业</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市解决方案</p></li>
+								<li><a href="zhihuidianshang.html">智慧电商</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">服务
+						<ul class="heads-1">
+							<li class="p1"><p>智伟增值服务</p></li>
+							<li><a href="yunweifuwu.html">运维服务</a></li>
+							<li><a href="shujufuwu.html">数据服务</a></li>
+							<li><a href="youhua.html">优化服务</a></li>
+							<li><a href="anquan.html">安全服务</a></li>
+						</ul>
+					</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">荣科研究院
+						<ul class="heads-1">
+							<li><a href="yanjiuyuan.html">研究院简介</a></li>
+							<li><a href="xinwendongtai.html">新闻动态</a></li>
+							
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">成员企业
+						<ul class="heads-1">
+							<li><a href="http://www.meehealth.com/">米健信息</a></li>
+							<li><a href="http://www.china-shine.com.cn/">神州视翰</a></li>
+							<li><a href="about:blank">美国享云</a></li>
+							<li><a href="http://www.megahealthcn.com/">麦健医疗</a></li>
+							<li><a href="http://www.shcreating.com/">今创科技</a></li>
+							<li><a href="rongyikeji.html">赛迈特税</a></li>
+							<li><a href="http://www.greatsoft.net/">冠新软件</a></li>
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">关于我们
+						<ul class="heads-1">
+							<li><a href="rongkeziwanggongsijieshao.html">公司介绍</a></li>
+							<li><a href="xinwenzhongxin.html">新闻中心</a></li>
+							<li><a href="rongyu.html">资质荣誉</a></li>
+							<li><a href="chanyejijin.html">产业基金</a></li>
+							<li><a href="http://rs.p5w.net/c/300290.shtml">投资者关系</a></li>
+							<li><a href="lianxiwomwn.html">联系我们</a></li>
+							<li><a href="gongzuojihui.html">工作机会</a></li>
+						</ul>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" name=""placeholder="站内搜素">
+				<a class="search-1" href="rongkeshouye.html"></a>
+			</div>
+			<div class="ying">|<span>English</span></div>
+		</div>
+	<div class="conten">
+		<div class="back-1">
+			<ul>
+				<li class="back-11"></li>
+				<li class="back-12">
+						当前位置：
+					<a href="rongkeshouye.html">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;解决方案&nbsp;&nbsp;|&nbsp;&nbsp;智慧电商
+				</li>
+			</ul>
+		</div>
+		<!-- 中间neir -->
+			<div class="back-2">
+				<div class="back-21">智慧电商</div>
+				<!-- 中间内容 -->
+				<div class="back-3">
+					<span class="neirong2"> 荣科智慧电商平台是电子商务3.0时代下的产物，平台致力于建设完善的电商生态体系，打通用户、需求、入口、线上线下渠道、企业和商家，使电商行业真正成为一个完善的整体。助力各行各业电子商务化的深层次的改造，实现各行各业和电子商务的技术对接。
+					平台提供B2B、B2C、C2C、O2O等模式的解决方案，提供商城门户网站、手机APP、销售管理平台、活动管理系统、仓储库存管理系统、拣货管理系统、物流管理系统、渠道管理系统、采购管理系统、金融平台等等功能应用。在“智能分析”方面，平台引入美国先进的“用户行为分析”模型，对平台用户的购买力、消费习惯、使用习惯等进行专业的数据采集、分析，并结合平台的数十种运营手段（会员、促销、代金券等）完成销售计划。</span>
+				</div>
+				<div class="back-4">
+					<span class="neirong1">产品功能架构</span>
+					
+				</div>
+				<div class="it"><img src="images/zhichi.png"></div>
+				<div class="jiazhi">
+					<span class="jia1">产品价值</span>
+					<span class="jia2">· 平台可以对用户的使用习惯、产品销售情况等数据进行智能分析，从而可以实现对整体销售策略上的决策辅助；</span>
+					<span class="jia2">· 支持不同的ERP/CRM系统对接，可以快速实现传统行业与电子商务融合；</span>
+					<span class="jia2">· 提供各种行业的订制化开发，例如：生鲜粮食、银行金融、商场超市、五金建材、保险信贷等行业。苏宁金融平台是金融行业的案例。</span>
+				</div>
+				
+			</div>
+	</div>
+	<div class="footer">
+			<div class="footer-1"><a href=""></a></div>
+					<div class="footer-2">
+						<p>服务支持</p>
+						<p>400-888-8045</p>
+						<p>800-890-8808</p>
+					</div>
+					<div class="footer-3">
+						<div class="footer-31">
+							<a href="http://www.bringspring.com/a/jiankangshuju/">健康数据</a>
+							<a href="http://www.bringspring.com/a/zhinengyunfuwu/">智能云服务</a>
+							<a href="http://www.bringspring.com/a/zhihuichengshi/">智慧城市</a>
+							<a href="http://irm.p5w.net/ssgs/S300290/">投资者关系</a>
+							<a href="http://www.bringspring.com/a/guanyuwomen/gongzuojihui/">工作机会</a>
+							<a href="http://www.bringspring.com/a/guanyuwomenlianxiwomen/">联系我们</a>
+						</div>
+						<div class="footer-32">
+							Copyright © 荣科科技股份有限公司 Bringspring All Rights Reserved 辽ICP备17005228号
+						</div>
+						<div class="footer-33"><span></span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21019402000107">辽宁网安备 &nbsp;21019402000107号</a></div>
+					</div>
+		</div>
+	
+</body>
+</html>

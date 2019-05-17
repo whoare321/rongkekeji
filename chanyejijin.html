@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>产业基金</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		.header{width:95%;height: 64px;background: #fff;margin:auto;text-align: center;}
+		.header div{float: left;}
+		.header .logo a{float: left;text-decoration: none;margin-top: 17px;}
+		.header .logo .logo-1{width: 152px;height: 47px;background: url(images/logo-1.jpg);}
+		.header .logo .logo-2{width: 102px;height: 47px;background: url(images/logo-2.jpg);}
+		.header .head .heads li{float: left;list-style: none;display: inline-block;height: 60px;line-height: 60px;width: 100px;background: #fff;text-align: center;font-weight: bold;}
+		.header .head .heads li:hover{background: #eee;}
+		.header .head .heads li a{text-decoration: none;color: #444;}
+		.header .head .heads li ul{float: left;clear: both;}
+
+		.header .head .heads .heads-2 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 25px;height: 25px;font-size: 12px;}
+		.header .head .heads .heads-2 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-2 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-2 li a:hover{color: #007BC1;}
+		.header .head .heads .heads-1 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 15px;height: 20px;}
+		.header .head .heads .heads-1 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-1 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-1 li a:hover{color: #007BC1;}
+		.header .search{width: 225px;height: 22px;border-radius: 4px;border:1px solid #A5D5CA;margin-top: 20px;}
+		.header .search input{width: 200px;height: 20px;border:none;}
+		.header .search a{width:20px;height: 22px;background: url(images/search-1.jpg)no-repeat;border:none;display: inline-block;float: right;}
+		.header .ying{color: #888;padding-left: 5px;margin-top: 20px;}
+		.header .ying span{color: #333;margin-left: 5px;}
+
+
+		.conten{width: 100%;height: 2100px;}
+		.back-1{width:100%;height: 409px;}
+		.back-1 li{list-style: none;}
+		.back-1 .back-11{width:100%;height: 339px;background: url(images/back-11.jpg)center center;display: block;}
+		.back-1 .back-12{width:100%;height: 70px;background: url(images/back-12.jpg);display: block;color: #fff;padding-left: 80px;line-height: 70px;}
+		.back-1 .back-12 a{color: #fff;text-decoration: none;}
+		.back-1 .back-12 a:hover{color: #2C92BF;text-decoration: underline;cursor: pointer;}
+		.back-2{width: 100%;height: 130px;background: #fff;}
+		.back-2 .back-21{width: 976px;height: 110px;font-size: 26px;font-weight: bold;line-height: 110px;text-align: center;margin:10px auto;}
+		.back-3{width: 976px;height: 200px;border-top: 1px solid#000;margin:0px auto;}
+		.back-3 span{padding-top: 20px;display: block;}
+		.back-3 .neirong1{font-size: 18px;color: #008fd7;}
+		.back-3 .neirong2{font-size: 16px;color: #666;}
+		.it,.it img{width: 600px;height: 264px;margin: 1px auto;}
+
+		.back-4{width: 976px;height: 320px;margin:0 auto;line-height: 30px;margin-top: 20px;}
+		.back-4 span{display: block;}
+		.back-4 .neirong1{font-size: 18px;color: #008fd7;}
+		.back-4 .neirong2{font-size: 16px;color: #666;}
+
+		.back-5{width: 976px;height: 150px;margin:0 auto;line-height: 30px;margin-top: 20px;}
+		.back-5 span{display: block;}
+		.back-5 .neirong1{font-size: 18px;color: #008fd7;}
+		.back-5 .neirong2{font-size: 16px;color: #666;}
+
+		.footer {width: 100%;height: 170px;background: #4c4c4c;font-size: 12px;color: #fff;margin-top: 30px;}
+		.footer div{float: left;margin-left: 20px}
+		.footer .footer-1,.footer .footer-2,.footer .footer-3{margin-top: 30px;}
+		.footer .footer-1 a{width: 74px;height: 74px;background: url(images/footer-1.jpg);background-size: 100% 100%;display: inline-block;margin-left: 70px;}
+		.footer .footer-2 p{margin-top:8px;}
+		.footer div.footer-3{float: right;margin-right: 70px;}
+		.footer div.footer-3 div{clear: both;float: right;margin-top: 5px;}
+		.footer .footer-31 a{text-decoration: none;color: #fff;margin-left: 20px;}
+		.footer .footer-33 span{display: inline-block;width: 18px;height: 20px;background: url(images/footer-33.png);vertical-align: middle;margin-right: 10px;}
+		.footer .footer-33 a{text-decoration: none;color: #fff;}
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="logo">
+				<a class="logo-1" href="rongkeshouye.html"></a>
+				<a class="logo-2" href="http://irm.p5w.net/ssgs/S300290/"></a>
+			</div>
+			<div class="head">
+				<ul class="heads">
+					<li>
+						<a href="rongkeshouye.html">首页</a>
+					</li>
+					<li>
+						<a href="rongkeshouye.html">产品
+							<ul class="heads-2">
+								<li class="p1"><p>临床信息服务系统</p></li>
+								<li><a href="jizheng.html">急诊医学临床信息系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>医院管理信息系统</p></li>
+								<li><a href="yunweifuwu.html">全门诊智慧导诊系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>融合集成平台</p></li>
+								<li><a href="yunweifuwu.html">医院信息集成平台</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>区域医疗平台</p></li>
+								<li><a href="yunweifuwu.html">远程医院视频服务</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智维云平台</p></li>
+								<li><a href="yunweifuwu.html">云监控产品</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市产品</p></li>
+								<li><a href="yunweifuwu.html">协同办公</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">解决方案
+							<ul class="heads-2">
+								<li class="p1"><p>智维云方案</p></li>
+								<li><a href="jinrong.html">金融行业</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市解决方案</p></li>
+								<li><a href="zhihuidianshang.html">智慧电商</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">服务
+						<ul class="heads-1">
+							<li class="p1"><p>智伟增值服务</p></li>
+							<li><a href="yunweifuwu.html">运维服务</a></li>
+							<li><a href="shujufuwu.html">数据服务</a></li>
+							<li><a href="youhua.html">优化服务</a></li>
+							<li><a href="anquan.html">安全服务</a></li>
+						</ul>
+					</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">荣科研究院
+						<ul class="heads-1">
+							<li><a href="yanjiuyuan.html">研究院简介</a></li>
+							<li><a href="xinwendongtai.html">新闻动态</a></li>
+							
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">成员企业
+						<ul class="heads-1">
+							<li><a href="http://www.meehealth.com/">米健信息</a></li>
+							<li><a href="http://www.china-shine.com.cn/">神州视翰</a></li>
+							<li><a href="about:blank">美国享云</a></li>
+							<li><a href="http://www.megahealthcn.com/">麦健医疗</a></li>
+							<li><a href="http://www.shcreating.com/">今创科技</a></li>
+							<li><a href="rongyikeji.html">赛迈特税</a></li>
+							<li><a href="http://www.greatsoft.net/">冠新软件</a></li>
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">关于我们
+						<ul class="heads-1">
+							<li><a href="rongkeziwanggongsijieshao.html">公司介绍</a></li>
+							<li><a href="xinwenzhongxin.html">新闻中心</a></li>
+							<li><a href="rongyu.html">资质荣誉</a></li>
+							<li><a href="chanyejijin.html">产业基金</a></li>
+							<li><a href="http://rs.p5w.net/c/300290.shtml">投资者关系</a></li>
+							<li><a href="lianxiwomwn.html">联系我们</a></li>
+							<li><a href="gongzuojihui.html">工作机会</a></li>
+						</ul>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" name=""placeholder="站内搜素">
+				<a class="search-1" href="rongkeshouye.html"></a>
+			</div>
+			<div class="ying">|<span>English</span></div>
+		</div>
+		<div class="conten">
+			<div class="back-1">
+				<ul>
+					<li class="back-11"></li>
+					<li class="back-12">
+						当前位置：
+						<a href="rongkeshouye.html">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;关于我们&nbsp;&nbsp;|&nbsp;&nbsp;资质荣誉
+					</li>
+				</ul>
+			</div>
+			<div class="back-2">
+				<div class="back-21">产业基金</div>
+				<div class="back-3">
+					<span class="neirong1">基本情况</span>
+					<span class="neirong2">沈阳荣科融拓健康数据产业股权投资合伙企业（有限合伙）成立于2016年3月，由北京融拓创新投资管理有限公司作为基金管理人，首期基金规模5亿元人民币，专注于大健康以及大数据以及相关领域，投资阶段包括初创期，成长期，成熟期等阶段。</span>
+				</div>
+				<div class="it"><img src="images/chanye.png"></div>
+				<div class="back-4">
+					<span class="neirong1">基金优势</span>
+					<span class="neirong2">投资与产业经营的结合，核心团队由股权投资型、产业管理型、并购型等方面的专业精英组成，以多元化的知识与经验，提供专业的投资服务。
+					管理团队成员曾多年任职于国内大型证券公司和政府机构，长期为国内上市公司和众多中小创企业提供融资、并购、战略和业务咨询等深度服务工作，具备较为丰富的改制上市、并购重组业务经验和较强的投资管理能力。
+					董事长兼总裁齐政先生长期从事证券投行工作，先后在西南证券、世纪证券、平安证券投资银行部门担任高管，积累了丰富的投资管理经验和实践能力。合伙人、执行总裁刘禹先生从事证券投行工作近15年，擅长于挖掘企业核心竞争能力和投资价值，并先后保荐10余家企业完成了IPO和再融资。合伙人、执行总裁张年武先生，多年从事科技成果转化和产业化管理工作，先后担任北京市教委科研处副处长、中关村管委会创新处副处长和中关村高科技产业促进中心主任，在成果转化、科技创新政策研究、企业管理等方面积累了丰富的理论和实践经验。
+					目前，北京融拓创新投资管理有限公司管理资金规模13亿人民币，合作上市公司包括：荣科科技（300290），大北农（002385），金正大（002470），普莱柯（603566）等，投资领域包括大健康，大数据，智慧农业等，已投项目10余家。</span>
+				</div>
+				<div class="back-5">
+					<span class="neirong1">成立背景</span>
+					<span class="neirong2">为更好地利用上市公司投融资平台，围绕公司整体发展战略及规划进行前瞻性投资和布局，储备大健康、大数据等业务领域的优质标的资源，加速公司向健康数据领域的应用、服务和运营提供商方向进行战略转型，荣科科技股份有限公司引入专业投资管理机构和其他社会资本共同设立健康数据产业基金，以产业基金对外投资为纽带，储备和培育相关标的资产，协助标的资产提升规范运作水平和长期价值，在有效控制和降低投资风险的同时，取得较好的投资或并购整合效果。</span>
+				</div>
+				<div class="back-5">
+					<span class="neirong1">退出方式</span>
+					<span class="neirong2">基金参股或控股投资形成的股权可以通过IPO、股权转让、并购、股东及其关联公司回购及清算等方式退出。在符合公允性及同等条件的前提下，荣科科技对投资企业具有优先收购权。</span>
+				</div>
+				<div class="back-5">
+					<span class="neirong1">投后管理</span>
+					<span class="neirong2">基金将以股权投资为纽带，充分利用上市公司的技术、渠道、管理资源和品牌号召力，为已投项目嫁接市场、技术，人才与政府等资源，从战略、资源、业务、财务等方面进行全方位的增值服务，共同提升标的企业长远价值，实现多方共赢。</span>
+				</div>
+				<div class="back-5">
+					<span class="neirong1">投资案例</span>
+					<span class="neirong2">1. 冠新软件股份有限公司（834376）：专注于为医疗卫生行业信息化建设提供整体解决方案，包括方案咨询、规划设计、软件系统开发和部署、技术支持和运营服务。<br>
+					2. 北京中恒华瑞（北京）信息技术有限公司：专注于数据安全与管理产品的研发与销售。<br>
+					3. 上海麦健信息技术有限公司：专注于医疗机构系统信息平台的研发与销售。</span>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer">
+			<div class="footer-1"><a href=""></a></div>
+					<div class="footer-2">
+						<p>服务支持</p>
+						<p>400-888-8045</p>
+						<p>800-890-8808</p>
+					</div>
+					<div class="footer-3">
+						<div class="footer-31">
+							<a href="http://www.bringspring.com/a/jiankangshuju/">健康数据</a>
+							<a href="http://www.bringspring.com/a/zhinengyunfuwu/">智能云服务</a>
+							<a href="http://www.bringspring.com/a/zhihuichengshi/">智慧城市</a>
+							<a href="http://irm.p5w.net/ssgs/S300290/">投资者关系</a>
+							<a href="http://www.bringspring.com/a/guanyuwomen/gongzuojihui/">工作机会</a>
+							<a href="http://www.bringspring.com/a/guanyuwomenlianxiwomen/">联系我们</a>
+						</div>
+						<div class="footer-32">
+							Copyright © 荣科科技股份有限公司 Bringspring All Rights Reserved 辽ICP备17005228号
+						</div>
+						<div class="footer-33"><span></span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21019402000107">辽宁网安备 &nbsp;21019402000107号</a></div>
+					</div>
+			</div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>新闻中心</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;}
+		.header{width:95%;height: 64px;background: #fff;margin:auto;text-align: center;}
+		.header div{float: left;}
+		.header .logo a{float: left;text-decoration: none;margin-top: 17px;}
+		.header .logo .logo-1{width: 152px;height: 47px;background: url(images/logo-1.jpg);}
+		.header .logo .logo-2{width: 102px;height: 47px;background: url(images/logo-2.jpg);}
+		.header .head .heads li{float: left;list-style: none;display: inline-block;height: 60px;line-height: 60px;width: 100px;background: #fff;text-align: center;font-weight: bold;}
+		.header .head .heads li:hover{background: #eee;}
+		.header .head .heads li a{text-decoration: none;color: #444;}
+		.header .head .heads li ul{float: left;clear: both;}
+
+		.header .head .heads .heads-2 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 25px;height: 25px;font-size: 12px;}
+		.header .head .heads .heads-2 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-2 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-2 li a:hover{color: #007BC1;}
+		.header .head .heads .heads-1 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 15px;height: 20px;}
+		.header .head .heads .heads-1 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;}
+		.header .head .heads li:hover .heads-1 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-1 li a:hover{color: #007BC1;}
+		.header .search{width: 225px;height: 22px;border-radius: 4px;border:1px solid #A5D5CA;margin-top: 20px;}
+		.header .search input{width: 200px;height: 20px;border:none;}
+		.header .search a{width:20px;height: 22px;background: url(images/search-1.jpg)no-repeat;border:none;display: inline-block;float: right;}
+		.header .ying{color: #888;padding-left: 5px;margin-top: 20px;}
+		.header .ying span{color: #333;margin-left: 5px;}
+		.conten{width: 100%;height: 1600px;}
+		.back-1{width:100%;height: 409px;}
+		.back-1 li{list-style: none;}
+		.back-1 .back-11{width:100%;height: 339px;background: url(images/back-11.jpg)center center;display: block;}
+		.back-1 .back-12{width:100%;height: 70px;background: url(images/back-12.jpg);display: block;color: #fff;padding-left: 80px;line-height: 70px;}
+		.back-1 .back-12 a{color: #fff;text-decoration: none;}
+		.back-1 .back-12 a:hover{color: #2C92BF;text-decoration: underline;cursor: pointer;}
+
+		.nei-1{width: 900px;height: 200px;border-bottom: 1px solid #ececec;margin: 10px auto;}
+		.nei-1 span{display: block;font-size: 16px;color: #666;margin: 20px auto;}
+		.nei-1 .chao a{font-size: 18px;color: #000;text-decoration: none;}
+		.nei-1 .chao-1 a{font-size: 16px;color: #666;text-decoration: none;}
+		.nei-1 .chao a:hover,.nei-1 .chao-1 a:hover{color: #008FD7;}
+
+
+		.caidan{width: 730px;height: 100px;margin: 30px auto;}
+		.caidan ul li{list-style:none;float: left;margin-left: 10px;}
+		.caidan ul .cai-1{width: 52px;height: 30px;border: 1px solid #ececec;background: #f1f1f1;text-align: center;line-height: 28px;}
+		.caidan ul .cai-1 a{font-size: 14px;color: #888;text-decoration: none;}
+		.caidan ul .cai-2{width: 33px;height: 30px;border: 1px solid #ececec;background:#0074e8;text-align: center;line-height: 28px;}
+		.caidan ul .cai-2 a{color: #fff;font-size: 14px;text-decoration: none;}
+		.caidan ul .cai-3{width: 33px;height: 30px;border: 1px solid #ececec;background:#f1f1f1;text-align: center;line-height: 28px;}
+		.caidan ul .cai-3 a, .caidan ul .cai-5 a{color: #888;font-size: 14px;text-decoration: none;}
+		.caidan ul .cai-4{width: 66px;height: 30px;border: 1px solid #ececec;background: #f1f1f1;text-align: center;line-height: 28px;}
+		.caidan ul .cai-4 a{color: #888;font-size: 14px;text-decoration: none;}
+		.caidan ul .cai-5{width: 43px;height: 30px;border: 1px solid #ececec;background:#f1f1f1;text-align: center;line-height: 28px;}
+		
+		.caidan ul li:hover{background: #1b66c8;cursor: pointer;}
+		.caidan ul li:hover a{color: #fff;}
+
+		/*脚*/
+		.footer {width: 100%;height: 170px;background: #4c4c4c;font-size: 12px;color: #fff;margin-top: 30px;}
+		.footer div{float: left;margin-left: 20px}
+		.footer .footer-1,.footer .footer-2,.footer .footer-3{margin-top: 30px;}
+		.footer .footer-1 a{width: 74px;height: 74px;background: url(images/footer-1.jpg);background-size: 100% 100%;display: inline-block;margin-left: 70px;}
+		.footer .footer-2 p{margin-top:8px;}
+		.footer div.footer-3{float: right;margin-right: 70px;}
+		.footer div.footer-3 div{clear: both;float: right;margin-top: 5px;}
+		.footer .footer-31 a{text-decoration: none;color: #fff;margin-left: 20px;}
+		.footer .footer-33 span{display: inline-block;width: 18px;height: 20px;background: url(images/footer-33.png);vertical-align: middle;margin-right: 10px;}
+		.footer .footer-33 a{text-decoration: none;color: #fff;} 
+	</style>
+</head>
+<body>
+		<div class="header">
+			<div class="logo">
+				<a class="logo-1" href="rongkeshouye.html"></a>
+				<a class="logo-2" href="http://irm.p5w.net/ssgs/S300290/"></a>
+			</div>
+			<div class="head">
+				<ul class="heads">
+					<li>
+						<a href="rongkeshouye.html">首页</a>
+					</li>
+					<li>
+						<a href="rongkeshouye.html">产品
+							<ul class="heads-2">
+								<li class="p1"><p>临床信息服务系统</p></li>
+								<li><a href="jizheng.html">急诊医学临床信息系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>医院管理信息系统</p></li>
+								<li><a href="yunweifuwu.html">全门诊智慧导诊系统</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>融合集成平台</p></li>
+								<li><a href="yunweifuwu.html">医院信息集成平台</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>区域医疗平台</p></li>
+								<li><a href="yunweifuwu.html">远程医院视频服务</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智维云平台</p></li>
+								<li><a href="yunweifuwu.html">云监控产品</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市产品</p></li>
+								<li><a href="yunweifuwu.html">协同办公</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">解决方案
+							<ul class="heads-2">
+								<li class="p1"><p>智维云方案</p></li>
+								<li><a href="jinrong.html">金融行业</a></li>
+							</ul>
+							<ul class="heads-2">
+								<li class="p1"><p>智慧城市解决方案</p></li>
+								<li><a href="zhihuidianshang.html">智慧电商</a></li>
+							</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">服务
+						<ul class="heads-1">
+							<li class="p1"><p>智伟增值服务</p></li>
+							<li><a href="yunweifuwu.html">运维服务</a></li>
+							<li><a href="shujufuwu.html">数据服务</a></li>
+							<li><a href="youhua.html">优化服务</a></li>
+							<li><a href="anquan.html">安全服务</a></li>
+						</ul>
+					</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">荣科研究院
+						<ul class="heads-1">
+							<li><a href="yanjiuyuan.html">研究院简介</a></li>
+							<li><a href="xinwendongtai.html">新闻动态</a></li>
+							
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">成员企业
+						<ul class="heads-1">
+							<li><a href="http://www.meehealth.com/">米健信息</a></li>
+							<li><a href="http://www.china-shine.com.cn/">神州视翰</a></li>
+							<li><a href="about:blank">美国享云</a></li>
+							<li><a href="http://www.megahealthcn.com/">麦健医疗</a></li>
+							<li><a href="http://www.shcreating.com/">今创科技</a></li>
+							<li><a href="rongyikeji.html">赛迈特税</a></li>
+							<li><a href="http://www.greatsoft.net/">冠新软件</a></li>
+						</ul>
+						</a>
+					</li>	
+					<li>
+						<a href="rongkeshouye.html">关于我们
+						<ul class="heads-1">
+							<li><a href="rongkeziwanggongsijieshao.html">公司介绍</a></li>
+							<li><a href="xinwenzhongxin.html">新闻中心</a></li>
+							<li><a href="rongyu.html">资质荣誉</a></li>
+							<li><a href="chanyejijin.html">产业基金</a></li>
+							<li><a href="http://rs.p5w.net/c/300290.shtml">投资者关系</a></li>
+							<li><a href="lianxiwomwn.html">联系我们</a></li>
+							<li><a href="gongzuojihui.html">工作机会</a></li>
+						</ul>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" name=""placeholder="站内搜素">
+				<a class="search-1" href="rongkeshouye.html"></a>
+			</div>
+			<div class="ying">|<span>English</span></div>
+		</div>
+		<div class="conten">
+			<div class="back-1">
+				<ul>
+					<li class="back-11"></li>
+					<li class="back-12">
+						当前位置：
+						<a href="rongkeshouye.html">首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;关于我们&nbsp;&nbsp;|&nbsp;&nbsp;新闻中心
+					</li>
+				</ul>
+			</div>
+			<div class="nei-1">
+				<span class="chao"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180629/229.html">荣科视翰与安徽民营医疗健康协会达成战略合作</a></span>
+				<span class="shi">2018-11-09</span>
+				<span class="chao-1"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180629/229.html">11月8日，荣科科技旗下全资子公司神州视翰与安徽省民营医疗健康产业协会共同签署战略合作协议。根据协议，荣科视翰将协助安徽民营医院建设类似公立医院的全新医疗信息化平台，...</a></span>
+			</div>
+			<div class="nei-1">
+				<span class="chao"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180530/139.html">荣科科技斩获新华三论剑全国团队三等奖</a></span>
+				<span class="shi">2018-11-07</span>
+				<span class="chao-1"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180530/139.html">10月30日晚由新华三集团主办的合作伙伴大比武总决赛在北京落下帷幕，荣科科技一路过关斩将、稳扎稳打、厚积薄发，最终代表辽宁荣获全国团队三等奖，并取得北区第一名的佳绩。...</a></span>
+			</div>
+			<div class="nei-1">
+				<span class="chao"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180530/137.html">亮剑争锋，荣科科技跻身华三比武全国总决赛</a></span>
+				<span class="shi">2018-11-07</span>
+				<span class="chao-1"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180530/137.html">2018新华三论剑合作伙伴大比武正在如火如荼地进行中，荣科科技以半决赛第二名的好成绩代表辽宁队入围总决赛...</a></span>
+			</div>
+			<div class="nei-1">
+				<span class="chao"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180525/131.html">荣科出品沈阳市城防综合指挥调度平台</a></span>
+				<span class="shi">2018-10-24</span>
+				<span class="chao-1"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180525/131.html">在雨水多发季节通过完善的事前准备与灵活的指挥调度系统妥善处理城市防汛的各种事项，历来是城市规划与管理工作的重中之重。荣科科技承建的城防综合指挥中心，将城防信息网络...</a></span>
+			</div>
+			<div class="nei-1">
+				<span class="chao"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180525/129.html">荣科智慧人社推陈出新，丹东市民实现刷脸认证</a></span>
+				<span class="shi">2018-10-24</span>
+				<span class="chao-1"><a href="http://www.bringspring.com/a/rongkeyanjiuyuan/xinwendongtai/20180525/129.html">丹东惠民卡APP于8月27日正式上线，成为荣科科技在智慧城市领域布局的一步关键落子。 退休人员定期集中认证难一直是社保相关问题中的老大难，荣科科技为解决退休人员的后顾之忧，...</a></span>
+			</div>
+			<div class="caidan">
+				<ul>
+					<li class="cai-1"><a class="zi" href="#">首页</a></li>
+					<li class="cai-2"><a class="zi" href="#">1</a></li>
+					<li class="cai-3"><a class="zi" href="#">2</a></li>
+					<li class="cai-3"><a class="zi" href="#">3</a></li>
+					<li class="cai-3"><a class="zi" href="#">4</a></li>
+					<li class="cai-3"><a class="zi" href="#">5</a></li>
+					<li class="cai-3"><a class="zi" href="#">6</a></li>
+					<li class="cai-3"><a class="zi" href="#">7</a></li>
+					<li class="cai-3"><a class="zi" href="#">8</a></li>
+					<li class="cai-3"><a class="zi" href="#">9</a></li>
+					<li class="cai-5"><a class="zi" href="#">10</a></li>
+					<li class="cai-5"><a class="zi" href="#">11</a></li>
+					<li class="cai-4"><a class="zi" href="#">下一页</a></li>
+					<li class="cai-1"><a class="zi" href="#">末页</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-1"><a href=""></a></div>
+					<div class="footer-2">
+						<p>服务支持</p>
+						<p>400-888-8045</p>
+						<p>800-890-8808</p>
+					</div>
+					<div class="footer-3">
+						<div class="footer-31">
+							<a href="http://www.bringspring.com/a/jiankangshuju/">健康数据</a>
+							<a href="http://www.bringspring.com/a/zhinengyunfuwu/">智能云服务</a>
+							<a href="http://www.bringspring.com/a/zhihuichengshi/">智慧城市</a>
+							<a href="http://irm.p5w.net/ssgs/S300290/">投资者关系</a>
+							<a href="http://www.bringspring.com/a/guanyuwomen/gongzuojihui/">工作机会</a>
+							<a href="http://www.bringspring.com/a/guanyuwomenlianxiwomen/">联系我们</a>
+						</div>
+						<div class="footer-32">
+							Copyright © 荣科科技股份有限公司 Bringspring All Rights Reserved 辽ICP备17005228号
+						</div>
+						<div class="footer-33"><span></span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21019402000107">辽宁网安备 &nbsp;21019402000107号</a></div>
+					</div>
+			</div>
+		</div>
+</body>
+</html>

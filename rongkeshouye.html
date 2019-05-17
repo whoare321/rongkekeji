@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>荣科科技有限公司</title>
+	<script type="text/javascript" src="js/jquery-1.js"></script>
+	<!-- 再导入unslider插件 -->
+	<script type="text/javascript" src="js/unslider.js"></script>
+	<style type="text/css">
+	html, body { font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;}
+		ul, ol { padding: 0;}
+		.banner { position: relative;text-align: center; }
+		.banner ul li{text-align: center;width: 100%;overflow: hidden;}
+		.banner ul li img{margin: 0 -100%;}
+		.banner li { list-style: none; }
+		.banner ul li { float: left; }
+		
+
+
+		#b04 { width:1343px;}
+		#b04 .dots { position: absolute; left: 0; right: 0; bottom: 20px;}
+		#b04 .dots li { display: inline-block; width: 10px; height: 10px; margin: 0 4px; text-indent: -999em; 
+			border: 1px solid #fff; border-radius: 6px; cursor: pointer; 
+			opacity: .4; -webkit-transition: background .5s, opacity .5s; -moz-transition: background .5s, opacity .5;
+			transition: background .5s, opacity .5s;text-align: center;}
+		/*被选中的小圆点的样式*/
+		#b04 .dots li.active {background: #fff;opacity: 1;}
+		#b04 .arrow { position: absolute; top: 200px;}
+		#b04 #al { left: 15px;}
+		#b04 #ar { right: 15px;}
+		*{padding: 0;margin: 0;}
+
+		.header{width:95%;height: 64px;background: #fff;margin:auto;text-align: center;}
+		.header div{float: left;}
+		.header .logo a{float: left;text-decoration: none;margin-top: 17px;}
+		.header .logo .logo-1{width: 152px;height: 47px;background: url(images/logo-1.jpg);}
+		.header .logo .logo-2{width: 102px;height: 47px;background: url(images/logo-2.jpg);}
+		.header .head .heads .h1{float: left;list-style: none;display: inline-block;height: 60px;line-height: 60px;width: 100px;background: #fff;text-align: center;font-weight: bold;}
+		.header .head .heads .h1:hover{background: #eee;}
+		.header .head .heads .h1:hover .heads-2{display: block;}
+		.header .head .heads .h1:hover .heads-3{display: block;}
+		.header .head .heads .h1 a{text-decoration: none;color: #444;}
+		.header .head .heads .h1 .heads-1{float: left;clear: both;}
+
+		.header .head .heads .heads-2{width: 1343px;height: 130px;background: #eee;margin-left:-480px;}
+		.header .head .heads .heads-2{display: none;}
+
+		.header .head .heads .heads-2 .heads-21{width: 700px;height: 130px;margin-left: 400px;}
+		.header .head .heads .h1 .heads-2 ul{float: left;list-style: none;}
+		.header .head .heads .h1 .heads-2 ul li{width: 145px;height: 45px;margin-left: 40px;}
+		.header .head .heads .h1 .heads-2 ul li.p1{border-bottom: 1px solid #007BC1;color: #007BC1;}
+		.header .head .heads .heads-2{position: relative;z-index: 100;}
+
+		.header .head .heads .heads-3{width: 1343px;height: 130px;background: #eee;margin-left:-380px;}
+		.header .head .heads .heads-3{display: none;}
+
+		.header .head .heads .heads-3 .heads-31{width: 1343px;height: 130px;margin-left: 40px;}
+		.header .head .heads .h1 .heads-3 ul{float: left;list-style: none;}
+		.header .head .heads .h1 .heads-3 ul li{width: 145px;height: 45px;margin-left: 40px;}
+		.header .head .heads .h1 .heads-3 ul li.p1{border-bottom: 1px solid #007BC1;color: #007BC1;}
+		.header .head .heads .heads-3{position: relative;z-index: 100;}
+
+		.header .head .heads .heads-1 .p1 p{color: #007BC1;border-bottom: 1px solid  #007BC1;line-height: 15px;height: 20px;}
+		.header .head .heads .heads-1 li{font-weight:normal;display: block;clear: both;height: 30px;line-height: 30px;font-size: 14px;background: #eee;display: none;font-color:#444;position: relative;z-index: 100;width: 100px;}
+		.header .head .heads li:hover .heads-1 li {display: block;cursor: pointer;}
+		.header .head .heads li:hover .heads-1 li a:hover{color: #007BC1;}
+		.header .search{width: 225px;height: 22px;border-radius: 4px;border:1px solid #A5D5CA;margin-top: 20px;}
+		.header .search input{width: 200px;height: 20px;border:none;}
+		.header .search a{width:20px;height: 22px;background: url(images/search-1.jpg)no-repeat;border:none;display: inline-block;float: right;}
+		.header .ying{color: #888;padding-left: 5px;margin-top: 20px;}
+		.header .ying span{color: #333;margin-left: 5px;}
+		
+		
+
+		.cont{width: 100%;height: 598px;}
+		.cont ul{list-style: none;}
+		.cont .cont-1{width: 100%;height: 55px;font-size: 24px;text-align: center;color: #222;margin-top: 50px; }
+		.cont .cont-11{font-size: 12px;}
+		.cont .cont-2{width: 1180px;height: 452px;margin:0 auto;}
+		.cont .cont-2 li{float: left;}
+		.cont .cont-2 .cont-21{width: 462px;height:452px;border: 1px solid #007BC1;display: inline-block;}
+		.cont .cont-2 .cont-211{width: 460px;height: 270px;display: block;}
+		.cont .cont-2 .cont-211 img{width: 460px;height: 270px;}
+		.cont .cont-2 .cont-212{width: 460px;height: 180px;display: block;}
+		.cont .cont-2 .cont-212 .conts-2{width: 460px;height: 55px;font-size: 24px;color:#007BC1;line-height: 55px; }
+		.cont .cont-2 .cont-212 .conts-2 li{float: left;}
+		.cont .cont-2 .cont-212 .conts-1 .conts-2 .cont-2122{width: 23px;height: 23px;display: inline-block;background: url(images/cont-2122.gif);float: right;margin-top: 12px;margin-right: 35px;}
+		.cont .cont-2 .cont-212 .conts-1 .conts-2 .cont-2121{margin-left: 35px;}
+		.cont .cont-2 .cont-212 .conts-3{width: 384px;height: 93px;display: block;margin: 1px auto;margin-top: 30px;margin-left: 40px;}
+		.cont .cont-2 .cont-212 .conts-3 a{text-decoration: none;color: #323232;}
+		.cont .cont-2 .cont-212 .conts-3 a:hover{color: #60aff6;;}
+
+		.cont .cont-2 .cont-22{display: block;width: 685px;height: 452px;float: right;}
+		.cont .cont-2 .cont-22  .cont-221{display:inline-block;width: 685px;height: 214px;border: 1px solid #c7c7c7;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2211{display: block;width: 335px;height: 214px;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2211 img{width: 335px;height: 214px;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212{display:block;width: 350px;height: 214px;margin:1px auto;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes{display: inline-block;width: 350px;height: 55px;font-size: 24px;color: #333;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes .contes-b{display: block;width: 23px;height: 23px;background: url(images/conts-2122.gif);float: right;margin-right: 35px;margin-top: 20px;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes .contes-a{margin-left: 35px;margin-top: 20px;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes-1{display: inline-block;width: 300px;height: 117px;margin-left: 35px;margin-top: 39px;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes-1 a{text-decoration: none;color: #858585;}
+		.cont .cont-2 .cont-22  .cont-221 .cont-2212 .contes-1 a:hover{color: #60aff6}
+
+		.cont .cont-2 .cont-22  .cont-222{display:inline-block;width: 685px;height: 214px;border: 1px solid #c7c7c7;margin-top: 22px;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221{display:block;width: 350px;height: 214px;margin:1px auto;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes{display: inline-block;width: 350px;height: 55px;font-size: 24px;color: #333;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes .cotes-b{display: block;width: 23px;height: 23px;background: url(images/conts-2122.gif);float: right;margin-right: 35px;margin-top: 20px;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes .cotes-a{margin-left: 35px;margin-top: 20px;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes-1{display: inline-block;width: 300px;height: 117px;margin-left: 35px;margin-top: 39px;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes-1 a{text-decoration: none;color: #858585;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2221 .cotes-1 a:hover{color: #60aff6}
+
+		.cont .cont-2 .cont-22  .cont-222 .cont-2222{display: block;width: 335px;height: 214px;}
+		.cont .cont-2 .cont-22  .cont-222 .cont-2222 img{width: 335px;height: 214px;}
+		.foot{width: 1160px;height: 440px;background: #f9f9f9;margin:-40px auto;}
+		.foot .title{width:1160px;height: 70px;text-align: center;}
+		.foot .title span{display: block;}
+		.foot .title .title-1{font-size: 24px;margin-top: 18px;}
+		.foot .title .title-2{font-size: 12px;}
+		.foot .t-scr{width: 1160px; height: 300px;}
+		.foot .t-scr div{float: left;}
+		.foot .t-scr .scr-l{width: 578px;height: 350px;border-right: 1px solid #888;}
+		.foot .t-scr .scr-l .left-top{width:480px;height: 65px;margin-left: 45px;}
+		.foot .t-scr .scr-l .left-top span{display: inline-block;line-height: 65px;}
+		.foot .t-scr .scr-l .left-top .left-logo{width: 91px;height: 32px;vertical-align: middle;}
+		.foot .t-scr .scr-l .left-top .left-r{font-size: 18px;color: #008FD7;width: 380px;height: 32px;}
+		.foot .t-scr .scr-l .left-top .left-r a{font-size: 14px;color: #666;float: right;text-decoration: none;}
+		.foot .t-scr .scr-l .left-top .left-r a:hover{color: #008FD7;}
+
+		.foot .t-scr .scr-l .left-mid{height: 117px;width: 480px;border-bottom: 1px dashed #888;margin-left: 45px;}
+		.foot .t-scr .scr-l .left-mid span{float: left;display: inline-block;}
+		.foot .t-scr .scr-l .left-mid .mid-logo{width: 119px;height: 90px;}
+		.foot .t-scr .scr-l .left-mid .mid-logo img{width: 119px;height: 90px;}
+		.foot .t-scr .scr-l .left-mid .mid-r{width: 350px;height: 90px;float: right;}
+		.foot .t-scr .scr-l .left-mid .mid-r ul{list-style: none;font-size: 16px;color: #999;}
+		.foot .t-scr .scr-l .left-mid .mid-r ul .mid-t a{color: #008FD7;text-decoration: none;}
+		.foot .t-scr .scr-l .left-mid .mid-r ul .mid-t1 a{font-size: 14px;text-decoration: none;color: #323232;}
+		.foot .t-scr .scr-l .left-mid .mid-r ul .mid-t1 a:hover{color:#008FD7;}
+		.foot .t-scr .scr-l .dibu{height: 160px;width: 480px;margin-left: 45px;list-style: none;}
+		.foot .t-scr .scr-l .dibu ul li{height: 20px;width:480px;display: block;margin-top: 5px;}
+		.foot .t-scr .scr-l .dibu ul li span{float: right;color: #888;}
+		.foot .t-scr .scr-l .dibu ul li a{text-decoration: none;color: #323232;}
+		.foot .t-scr .scr-l .dibu ul li a:hover{color: #008FD7;}
+
+		.foot .t-scr .scr-r{width: 578px;height: 350px;}
+		.foot .t-scr .scr-r .right-top{width: 480px;height: 170px;margin-left: 45px;}
+		.foot .t-scr .scr-r .right-top ul li{list-style: none;display: inline-block;float: left;margin-top: 40px;}
+		.foot .t-scr .scr-r .right-top .right-l{width: 91px;height: 116px;}
+		.foot .t-scr .scr-r .right-top .right-l img{width: 91px;height: 116px;}
+		.foot .t-scr .scr-r .right-top .right-r{width: 380px;height: 116px;float: right;}
+		.foot .t-scr .scr-r .right-top .right-r p{font-size: 18px;color: #008FD7;padding-bottom: 20px;}
+		.foot .t-scr .scr-r .right-top .right-r a{text-decoration: none;font-size: 14px;color: #323232;}
+		.foot .t-scr .scr-r .right-top .right-r a:hover{color: #008FD7;}
+
+		.foot .t-scr .scr-r .right-bottom{width: 480px;height: 170px;margin-left: 45px;}
+		.foot .t-scr .scr-r .right-bottom ul li{list-style: none;display: inline-block;float: left;margin-top: 20px;}
+		.foot .t-scr .scr-r .right-bottom .right-l1{width: 91px;height: 116px;}
+		.foot .t-scr .scr-r .right-bottom .right-l1 img{width: 91px;height: 116px;}
+		.foot .t-scr .scr-r .right-bottom .right-r1{width: 380px;height: 116px;float: right;}
+		.foot .t-scr .scr-r .right-bottom .right-r1 p{font-size: 18px;color: #008FD7;padding-bottom: 20px;}
+		.foot .t-scr .scr-r .right-bottom .right-r1 a{text-decoration: none;font-size: 14px;color: #323232;}
+		.foot .t-scr .scr-r .right-bottom .right-r1 a:hover{color: #008FD7;}
+
+
+		.footer {width: 100%;height: 170px;background: #4c4c4c;font-size: 12px;color: #fff;margin-top: 30px;}
+		.footer div{float: left;margin-left: 20px;}
+		.footer .footer-1,.footer .footer-2,.footer .footer-3{margin-top: 30px;}
+		.footer .footer-1 a{width: 74px;height: 74px;background: url(images/footer-1.jpg);background-size: 100% 100%;display: inline-block;margin-left: 70px;}
+		.footer .footer-2 p{margin-top:8px;}
+		.footer div.footer-3{float: right;margin-right: 70px;}
+		.footer div.footer-3 div{clear: both;float: right;margin-top: 5px;}
+		.footer .footer-31 a{text-decoration: none;color: #fff;margin-left: 20px;}
+		.footer .footer-33 span{display: inline-block;width: 18px;height: 20px;background: url(images/footer-33.png);vertical-align: middle;margin-right: 10px;}
+		.footer .footer-33 a{text-decoration: none;color: #fff;}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+			<div class="logo">
+				<a class="logo-1" href="rongkeshouye.html"></a>
+				<a class="logo-2" href="http://irm.p5w.net/ssgs/S300290/"></a>
+			</div>
+			<div class="head">
+				<ul class="heads">
+					<li class="h1">
+						<a href="rongkeshouye.html">首页</a>
+					</li>
+					<li class="h1">
+						<a href="rongkeshouye.html">产品
+							<div class="heads-3">
+								<div class="heads-31">
+									<ul>
+								<li class="p1"><p>临床信息服务系统</p></li>
+								<li><a href="jizheng.html">急诊医学临床信息系统</a></li>
+							</ul>
+							<ul>
+								<li class="p1"><p>医院管理信息系统</p></li>
+								<li><a href="yunweifuwu.html">全门诊智慧导诊系统</a></li>
+							</ul>
+							<ul>
+								<li class="p1"><p>融合集成平台</p></li>
+								<li><a href="yunweifuwu.html">医院信息集成平台</a></li>
+							</ul>
+							<ul>
+								<li class="p1"><p>区域医疗平台</p></li>
+								<li><a href="yunweifuwu.html">远程医院视频服务</a></li>
+							</ul>
+							<ul>
+								<li class="p1"><p>智维云平台</p></li>
+								<li><a href="yunweifuwu.html">云监控产品</a></li>
+							</ul>
+							<ul>
+								<li class="p1"><p>智慧城市产品</p></li>
+								<li><a href="yunweifuwu.html">协同办公</a></li>
+							</ul>
+								</div>
+							</div>
+						</a>
+					</li>	
+					<li class="h1">
+						<a href="rongkeshouye.html">解决方案
+							<div class="heads-2">
+								<div class="heads-21">
+									<ul>
+										<li class="p1"><p>智维云方案</p></li>
+										<li><a href="jinrong.html">金融行业</a></li>
+									</ul>
+									<ul>
+										<li class="p1"><p>智慧城市解决方案</p></li>
+										<li><a href="zhihuidianshang.html">智慧电商</a></li>
+									</ul>
+								</div>
+							</div>
+						</a>
+					</li>	
+					<li class="h1">
+						<a href="rongkeshouye.html">服务
+						<ul class="heads-1">
+							<li class="p1"><p>智伟增值服务</p></li>
+							<li><a href="yunweifuwu.html">运维服务</a></li>
+							<li><a href="shujufuwu.html">数据服务</a></li>
+							<li><a href="youhua.html">优化服务</a></li>
+							<li><a href="anquan.html">安全服务</a></li>
+						</ul>
+					</a>
+					</li>	
+					<li class="h1">
+						<a href="rongkeshouye.html">荣科研究院
+						<ul class="heads-1">
+							<li><a href="yanjiuyuan.html">研究院简介</a></li>
+							<li><a href="xinwendongtai.html">新闻动态</a></li>
+							
+						</ul>
+						</a>
+					</li>	
+					<li class="h1">
+						<a href="rongkeshouye.html">成员企业
+						<ul class="heads-1">
+							<li><a href="http://www.meehealth.com/">米健信息</a></li>
+							<li><a href="http://www.china-shine.com.cn/">神州视翰</a></li>
+							<li><a href="about:blank">美国享云</a></li>
+							<li><a href="http://www.megahealthcn.com/">麦健医疗</a></li>
+							<li><a href="http://www.shcreating.com/">今创科技</a></li>
+							<li><a href="rongyikeji.html">赛迈特税</a></li>
+							<li><a href="http://www.greatsoft.net/">冠新软件</a></li>
+						</ul>
+						</a>
+					</li>	
+					<li class="h1">
+						<a href="rongkeshouye.html">关于我们
+						<ul class="heads-1">
+							<li><a href="rongkeziwanggongsijieshao.html">公司介绍</a></li>
+							<li><a href="xinwenzhongxin.html">新闻中心</a></li>
+							<li><a href="rongyu.html">资质荣誉</a></li>
+							<li><a href="chanyejijin.html">产业基金</a></li>
+							<li><a href="http://rs.p5w.net/c/300290.shtml">投资者关系</a></li>
+							<li><a href="lianxiwomwn.html">联系我们</a></li>
+							<li><a href="gongzuojihui.html">工作机会</a></li>
+						</ul>
+						</a>
+					</li>					
+				</ul>
+			</div>
+			<div class="search">
+				<input type="text" name=""placeholder="站内搜素">
+				<a class="search-1" href="rongkeshouye.html"></a>
+			</div>
+			<div class="ying">|<span>English</span></div>
+		</div>
+		<div class="back-box">
+			<div class="banner" id="b04">
+				<ul>
+					<li><img src="images/back-11.jpg" alt="" ></li>
+					<li><img src="images/yiliao.jpg" alt="" ></li>
+					<li><img src="images/yunwei.png" alt=""></li>
+					<li><img src="images/zhihui.png" alt="" ></li>
+					<li><img src="images/yanjiuyuan.png" alt="" ></li>
+				</ul>
+				<a href="javascript:void(0);" class="unslider-arrow04 prev">
+					<img class="arrow" id="al" src="images/backs-l.png" alt="prev" width="50" height="50">
+				</a>
+				<a href="javascript:void(0);" class="unslider-arrow04 next">
+					<img class="arrow" id="ar" src="images/backs-r.png" alt="next" width="50" height="50">
+				</a>
+			</div>
+	<script>
+		$(function(){
+			 var unslider04 = $('#b04').unslider({
+				dots: true
+			}),
+
+			data04 = unslider04.data('unslider');
+			$('.unslider-arrow04').click(function() {
+		        var fn = this.className.split(' ')[1];
+		        data04[fn]();
+		    });
+		});
+
+	</script>
+		</div>
+		<div class="cont">
+			<div class="cont-1">
+				<ul>
+					<li>核心业务</li>
+					<li class="cont-11">Core &nbsp;Business</li>
+				</ul>
+			</div>
+			<div class="cont-2">
+				<ul>
+					<li class="cont-21">
+						<ul>
+							<li class="cont-211"><a href="http://www.bringspring.com/a/jiankangshuju/"><img src="images/cont-211.png"></a></li>
+							<li class="cont-212">
+								<ul>
+									<li class="conts-1">
+										<ul class="conts-2">
+											<li class="cont-2121">健康数据</li>
+											<li class="cont-2122"></li>
+										</ul>
+									</li>
+									<li class="conts-3"><a href="">国内医疗信息化产品门类广泛全面的供应商之一，融合贯通医院多科室精细化管理系统的搭建，旗下成员企业为中国近千家医疗机构提供优质的医疗信息化产品与服务，助其提升医疗服务的效率与质量。</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="cont-22">
+						<ul>
+							<li class="cont-221">
+								<ul>
+									<li class="cont-2211"><a href="http://www.bringspring.com/a/zhinengyunfuwu/"><img src="images/cont-221.png"></a></li>
+									<li class="cont-2212">
+										<ul>
+											<li class="contes">
+												<ul>
+													<li class="contes-a">
+													智能云服务 </li>
+													<li class="contes-b"></li>
+												</ul>
+											</li>
+											<li class="contes-1"><a href="">以智维云平台为基础，利用大数据、云计算等先进技术与智能化整合，为面向“互联+”时代下的金融、社保、教育、政府、医疗等关键领域客户提供全方位、智能化的解决方案和增值服务。</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="cont-222">
+								<ul>
+									<li class="cont-2221">
+										<ul>
+											<li class="cotes">
+												<ul>
+													<li class="cotes-a">
+													智慧城市</li>
+													<li class="cotes-b"></li>
+												</ul>
+											</li>
+											<li class="cotes-1"><a href="">在城市基础设施、资源环境、社会民生、经济产业、市政管理五大领域提供一站式解决方案，为民众、企业和政府创造美好的生活环境、可持续发展的商业环境、高效的城市运营管理环境。</a></li>
+										</ul>
+									</li>
+									<li class="cont-2222">
+										<a href="http://www.bringspring.com/a/zhihuichengshi/"><img src="images/.cont-2222.png"></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="foot">
+			<div class="title">
+				<span class="title-1">咨询中心</span>
+				<span class="title-2">Information&nbsp;Center</span>
+			</div>
+			<!-- 内容 -->
+			<div class="t-scr">
+				<!-- 内容左 -->
+				<div class="scr-l">
+					<div class="left-top">
+						<span class="left-logo"><img src="images/left-jogo.png"></span>
+						<span class="left-r">新闻中心<a href="">查看更多</a></span>
+					</div>
+					<div class="left-mid">
+						<span class="mid-logo"><a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/0626/227.html"><img src="images/mid-logo.jpg"></a></span>
+						<span class="mid-r">
+							<ul>
+								<li class="mid-t"><a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/0626/227.html">荣科科技当选辽宁省企业上云“云综合服务商</a></li>
+								<li>2018-10-24</li>
+								<li class="mid-t1"><a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/0626/227.html">近日，荣科科技在辽宁省工业和信息化委员会组织开展的辽宁省企业上云服务商申报工作中被评选为云综合服务商。 ...</a></li>
+							</ul>
+						</span>
+					</div>
+					<div class="dibu">
+						<ul>
+							<li>
+								<a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/1102/238.html">·荣科科技斩获新华三论剑全国团队三等奖</a>
+								<span>2018-11-07</span>
+							</li>
+							<li>
+								<a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/1022/237.html">·荣科出品沈阳市城防综合指挥调度平台</a>
+								<span>2018-10-24</span>
+							</li>
+							<li>
+								<a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/0925/233.html">·荣科智慧人社推陈出新，丹东市民实现刷脸认证</a>
+								<span>2018-10-24</span>
+							</li>
+							<li>
+								<a href="http://www.bringspring.com/a/guanyuwomen/xinwenzhongxin/2018/0914/230.html">·荣科入围中国方案商500强“十佳医疗行业ISV</a>
+								<span>2018-10-24</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 内容右 -->
+				<div class="scr-r">
+					<!-- 右上 -->
+					<div class="right-top">
+						<ul>
+							<li class="right-l"><a href="http://www.bringspring.com/a/guanyuwomen/chenggonganli/"><img src="images/right-l.png"></a></li>
+							<li class="right-r">
+								<a href="http://www.bringspring.com/a/guanyuwomen/chenggonganli/"><p>客户案例—301医院</p></a>
+								
+								<a href="http://www.bringspring.com/a/guanyuwomen/chenggonganli/">作为担任全军及全国医疗服务任务的综合性医院，301医院与米健医疗深度合作，将急诊科业务水平、管理水平和科研水平提升到新的台阶，大为优化了急诊流程和医疗质控。</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 右下 -->
+					<div class="right-bottom">
+						<ul>
+							<li class="right-l1"><a href="http://www.bringspring.com//a/guanyuwomen/chenggonganli/"><img src="images/right-l1.png"></a></li>
+							<li class="right-r1">
+								<a href="http://www.bringspring.com/a/guanyuwomen/chenggonganli/"><p>客户案例—阜外医院</p></a>
+								
+								<a href="http://www.bringspring.com/a/guanyuwomen/chenggonganli/">世界最大的心脏病诊治中心之一，神州视翰智慧导诊、智慧病房系统极大地提升了阜外医院医护人员的工作效率，改善患者就医体验，提高了医院的人性化服务质量。</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+					<div class="footer-1"><a href=""></a></div>
+					<div class="footer-2">
+						<p>服务支持</p>
+						<p>400-888-8045</p>
+						<p>800-890-8808</p>
+					</div>
+					<div class="footer-3">
+						<div class="footer-31">
+							<a href="http://www.bringspring.com/a/jiankangshuju/">健康数据</a>
+							<a href="http://www.bringspring.com/a/zhinengyunfuwu/">智能云服务</a>
+							<a href="http://www.bringspring.com/a/zhihuichengshi/">智慧城市</a>
+							<a href="http://irm.p5w.net/ssgs/S300290/">投资者关系</a>
+							<a href="http://www.bringspring.com/a/guanyuwomen/gongzuojihui/">工作机会</a>
+							<a href="http://www.bringspring.com/a/guanyuwomenlianxiwomen/">联系我们</a>
+						</div>
+						<div class="footer-32">
+							Copyright © 荣科科技股份有限公司 Bringspring All Rights Reserved 辽ICP备17005228号
+						</div>
+						<div class="footer-33"><span></span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21019402000107">辽宁网安备 &nbsp;21019402000107号</a></div>
+					</div>
+				</div>
+	
+</body>
